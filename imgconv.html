@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            color: white;
+            background-color: rgb(41, 41, 41);
+        }
+        
+        .img {
+            height: auto;
+            width: auto;
+        }
+        html {
+            box-sizing: border-box;
+        }
+        
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+        
+        .column {
+            float: left;
+            width: 20%;
+            margin-bottom: 16px;
+            padding: 0 8px 8px 10px;
+            text-align: center;
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+            text-align: center;
+        }
+        
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        
+        .container {
+            padding: 0 16px;
+        }
+        
+        .container::after,
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .title {
+            color: grey;
+        }
+        
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .button:hover {
+            background-color: #555;
+        }
+        
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+        
+        .about-cross {
+            padding: 5px;
+            text-align: left;
+        }
+        ::-webkit-scrollbar {
+            background-color: black;
+            width: 5px;
+            height: 5px;
+          }
+          
+          /* Track */
+          ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgb(22, 22, 22);
+            border-radius: 10px;
+          }
+          
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: rgb(22, 22, 22);
+            border-radius: 10px;
+          }
+
+          .main-div,
+        .loggedin-div {
+            width: 20%;
+            margin: 0px auto;
+            margin-top: 150px;
+            padding: 20px;
+        }
+        
+        .glow-on-hover {
+            font-size: larger;
+            width: 280px;
+            height: 70px;
+            border: none;
+            outline: none;
+            color: aqua;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+        }
+        
+        .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        
+        .glow-on-hover:active {
+            color: #000
+        }
+        
+        .glow-on-hover:active:after {
+            background: transparent;
+        }
+        
+        .glow-on-hover:hover:before {
+            opacity: 1;
+        }
+        
+        .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgb(22, 22, 22);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        
+        @keyframes glowing {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+        
+        .about-sec {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            display: block;
+            font-size: 25px;
+        }
+        
+        .main-div input {
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fff;
+            padding: 15px;
+            outline: none;
+            width: 100%;
+            margin-bottom: 20px;
+            transition: 0.3s;
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+        }
+        
+        .main-div input:focus {
+            border: 1px solid #777;
+        }
+
+        .container { 
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.61);
+            border: 3px solid rgb(0, 0, 0); 
+          }          
+        
+        input,
+        button {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+        }
+        
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+          
+    </style>
+</head>
+
+<body>
+    <div class="about-cross">
+        
+    </div>
+    <div class="about-section">
+        <h1 style="color: aqua;">Anoroam</h1>
+        <img src="logo1.png" alt="error" width="250" height="250">
+    </div>
+    <h2 style="text-align:center; color:aqua;">Powered By ScriptieZ</h2>
+
+    <div class="center">
+    <div>
+        <a href="https://imgbb.com/">
+        <button class="glow-on-hover">IMG Converter</button>
+        </a>
+    </div>
+    </div>
+    <div>
+    <h3 style="text-align: center;">You can get a image address or url via <a href="https://imgbb.com/" style="color: aqua;">converter</a></h3>
+    </div>
+    <div>
+    <h3 style="text-align: center; color:aqua;">Step 1 :</h3>
+    </div>
+    <div class="about-section">
+        <h1 style="color: aqua;">Click on START UPLOADING</h1>
+        <img src="1.png" alt="error" width="100%" height="100%">
+    </div>
+    <div>
+        <h3 style="text-align: center; color:aqua;">Step 2 :</h3>
+        </div>
+        <div class="about-section">
+            <h1 style="color: aqua;">Select your image</h1>
+            <img src="2.png" alt="error" width="100%" height="100%">
+        </div>
+        <div>
+    <h3 style="text-align: center; color:aqua;">Step 3 :</h3>
+    </div>
+    <div class="about-section">
+        <h1 style="color: aqua;">Click on UPLOAD</h1>
+        <img src="3.png" alt="error" width="100%" height="100%">
+    </div>
+    <div>
+    <h3 style="text-align: center; color:aqua;">Step 4 :</h3>
+    </div>
+    <div class="about-section">
+        <h1 style="color: aqua;">Select HTML Full Linked from Embed Codes</h1>
+        <img src="4.png" alt="error" width="100%" height="100%">
+    </div>
+    <div>
+    <h3 style="text-align: center; color:aqua;">Step 5 :</h3>
+    </div>
+    <div class="about-section">
+        <h1 style="color: aqua;">Select and Copy the img src link</h1>
+        <img src="5.png" alt="error" width="100%" height="100%">
+    </div>
+    <div>
+    <h3 style="text-align: center; color:aqua;">Step 6 :</h3>
+    <h1 style="color: aqua; text-align: center;">* Finally Paste the Copied Link *</h1>
+    </div>
+    <div class="about-section">
+        <img src="6.png" alt="error" width="100%" height="100%">
+    </div>
+    <div>
+    <h3 style="text-align: center;">Any queries can be asked in <a href="https://sivavimel.github.io/anoroamct/" style="color: aqua; text-align:center;">Community Tab</a></h3>
+    </div>
+
+</body>
+
+</html>
